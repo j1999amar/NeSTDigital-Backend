@@ -11,7 +11,7 @@ public class EmployeeModel {
     @Id
     @GeneratedValue
     private int id;
-    private int empCode;
+    private int empid;
     private  String empName;
     private String designation;
     private String mail;
@@ -23,9 +23,9 @@ public class EmployeeModel {
     public EmployeeModel() {
     }
 
-    public EmployeeModel(int id, int empCode, String empName, String designation, String mail, String phone, String address, String username, String password) {
+    public EmployeeModel(int id, int empid, String empName, String designation, String mail, String phone, String address, String username, String password) {
         this.id = id;
-        this.empCode = empCode;
+        this.empid = empid;
         this.empName = empName;
         this.designation = designation;
         this.mail = mail;
@@ -43,12 +43,12 @@ public class EmployeeModel {
         this.id = id;
     }
 
-    public int getEmpCode() {
-        return empCode;
+    public int getEmpid() {
+        return empid;
     }
 
-    public void setEmpCode(int empCode) {
-        this.empCode = empCode;
+    public void setEmpid(int empid) {
+        this.empid = empid;
     }
 
     public String getEmpName() {

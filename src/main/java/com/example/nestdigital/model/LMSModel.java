@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+
+
 @Entity
 @Table(name = "lms")
 public class LMSModel {
@@ -18,11 +20,15 @@ public class LMSModel {
     private String toDate;
     private String applyDate;
     private int status;
+    private int casualLeave;
+
+
+
 
     public LMSModel() {
     }
 
-    public LMSModel(int id, int empid, String leaveType, String remarks, String fromDate, String toDate, String applyDate, int status) {
+    public LMSModel(int id, int empid, String leaveType, String remarks, String fromDate, String toDate, String applyDate, int status,int casualLeave) {
         this.id = id;
         this.empid = empid;
         this.leaveType = leaveType;
@@ -31,8 +37,11 @@ public class LMSModel {
         this.toDate = toDate;
         this.applyDate = applyDate;
         this.status = status;
-    }
+        this.casualLeave=casualLeave;
 
+
+
+    }
     public int getId() {
         return id;
     }
@@ -95,5 +104,13 @@ public class LMSModel {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public int getCasualLeave() {
+        return casualLeave;
+    }
+
+    public void setCasualLeave(int casualLeave) {
+        this.casualLeave = casualLeave;
     }
 }
